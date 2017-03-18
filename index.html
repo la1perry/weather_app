@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/geocode/json?&key=AIzaSyCZQGrXGLUFm7Pn1Hlc0690evgUxC6AlXU"></script>-->
+  
+  <title>my weather app</title>
+</head>
+<body>
+  <section class="main">
+  <div class="container">
+    <h1>weather app 2017</h1>
+    <div class="inner">
+      <form id="weather">
+          <!--<input type="text" id="address" placeholder="city, country">-->
+        <input type="text" id="city" placeholder="city">
+        <input type="text" id="country" placeholder="country">
+        <button onClick="getLocation()">get weather</button>
+      </form>
+      <div id="display" class="displayWeather">
+       <!-- your weather data and images goes in here -->
+      </div>
+    </div>
+  </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
