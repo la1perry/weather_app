@@ -31,8 +31,8 @@ const myLongitude=[];
 
 function getLocation(){
 
-const city = document.getElementById('city');
-const country = document.getElementById('country');
+const city = document.getElementById('city').value;
+const country = document.getElementById('country').value;
 
 const url='https://locationiq.org/v1/search.php?key=';
 const apiKey='b4f1a2a9d14fb5186eb9';
