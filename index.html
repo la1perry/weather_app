@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/geocode/json?&key=AIzaSyCZQGrXGLUFm7Pn1Hlc0690evgUxC6AlXU"></script>-->
   
+
+
   <title>my weather app</title>
 </head>
 <body>
@@ -14,12 +16,16 @@
     <h1>weather app 2017</h1>
     <div class="inner">
       <form id="weather">
-          <!--<input type="text" id="address" placeholder="city, country">-->
-        <input type="text" id="city" placeholder="city">
-        <input type="text" id="country" placeholder="country">
-        <button onClick="getLocation()">get weather</button>
+        <input type="text" id="city" placeholder="City">
+        <input type="text" id="country" placeholder="Country">
+        <button id="btn">get weather</button>
       </form>
       <div id="display" class="displayWeather">
+          
+          <div id="imgdiv"></div>
+          <!--<p>Latitude:</p><input type=text id="lat"/></p><p>Longitude</p><input type=text id="lng"/></p>-->
+          <p>The temperature is:<span id="temp"> </span>&deg;C</p>
+          <p>The weather outside is:<span id="desc"> </span></p>
        <!-- your weather data and images goes in here -->
       </div>
     </div>

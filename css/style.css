@@ -52,3 +52,7 @@ button {
   border: none;
   outline: none;
 }
+img {
+  width:50%;
+  float:right;
+}
