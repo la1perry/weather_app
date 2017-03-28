@@ -1,6 +1,6 @@
 
 const url='https://locationiq.org/v1/search.php?key=';
-const apiKey=' ';
+const apiKey='APIKEY';
 const btn=document.getElementById("btn");
 
 btn.addEventListener('click',(e)=>{
@@ -122,6 +122,7 @@ function appendImg () {
     const x=':';
     const hour=localTime[5].split(x);
     console.log(hour[0]);
+    
  
     const description=localStorage.getItem('description');
     let weather=JSON.parse(description);
