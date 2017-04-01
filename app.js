@@ -1,10 +1,12 @@
 
 const url='https://locationiq.org/v1/search.php?key=';
-const apiKey='APIKEY';
+const apiKey='b4f1a2a9d14fb5186eb9';
 const btn=document.getElementById("btn");
 
 btn.addEventListener('click',(e)=>{
 e.preventDefault();
+
+localStorage.clear();
 
 const cit = document.getElementById('city').value;
 const con = document.getElementById('country').value;
@@ -45,7 +47,7 @@ const Lat= localStorage.getItem('lat');
 const Latitude=JSON.parse(Lat);
 const Long = localStorage.getItem('long');
 const Longitude = JSON.parse(Long);
-const urlz='https://api.wunderground.com/api/APIKEY/conditions/q/'+Latitude+','+Longitude+'.json';
+const urlz='https://api.wunderground.com/api/e24e61fd64fcd1dd/conditions/q/'+Latitude+','+Longitude+'.json';
 let temperature=document.getElementById("temp");
 let describe=document.getElementById("desc");
          
@@ -149,14 +151,15 @@ function appendImg () {
       if (localTime[6]=='AM' & hour[0]>=7 ){ 
           pic.appendChild(img);
       img.src="imgs/cloudy.svg";
-      }else if (localTime[6]=='PM' & hour[0]<=8){ 
+      } else if (localTime[6]=='PM' & hour[0]<=8){ 
           pic.appendChild(img);
       img.src="imgs/cloudy.svg";
       }  else {
  pic.appendChild(img);
       img.src="imgs/night.svg";
   }
- } else if (weather.indexOf('Snow') >= 0) {
+ } 
+ else if (weather.indexOf('Snow') >= 0) {
     pic.appendChild(img);
       img.src="imgs/snow.svg";
   } else {
@@ -171,8 +174,7 @@ function appendImg () {
       img.src="imgs/night.svg";
       }
   }
-  localStorage.clear();
+  
 }
-
 
 
